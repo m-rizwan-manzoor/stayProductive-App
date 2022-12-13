@@ -1,0 +1,46 @@
+.card{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.card_top{
+    display: flex;
+    /* gap:5px; */
+    align-items: flex-start;
+}
+
+.card_top_labels{
+    flex:3;
+    display:flex;
+    flex-wrap: wrap;
+    gap:10px;
+    font-size: 14px;
+    line-height: 21px;
+}
+.card_top svg{
+    opacity: 0;
+}
+.card:hover .card_top svg{
+    opacity: 1;
+    transition: 200ms;
+}
+.card_title{
+    font-weight: bold;
+}
+.card_footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card_footer p{
+    display: flex;
+    gap:5px;
+    align-items: center;
+}
+.card_footer svg{
+width: 16px;
+}
