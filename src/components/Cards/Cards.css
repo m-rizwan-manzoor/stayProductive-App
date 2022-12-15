@@ -44,3 +44,16 @@
 .card_footer svg{
 width: 16px;
 }
+
+.card_top_more {
+    position: relative;
+    cursor: pointer;
+   
+  }
+  .card_dropdown{
+    background-color: #fff;
+    width: 130px;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 1px 0 20px rgb(0, 0, 0, 0.1);
+  }

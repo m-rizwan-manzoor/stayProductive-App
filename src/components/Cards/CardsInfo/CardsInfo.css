@@ -1,0 +1,66 @@
+.cardinfo {
+    padding: 30px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    grid: 30px;
+    width: 600px;
+}
+
+.cardinfo_box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cardinfo_box_title {
+    font-weight: bold;
+    font-size: 1.3rem;
+    display: flex;
+    gap: 10px;
+    /* justify-content: center; */
+    align-items: center;
+}
+.check{
+    width: fit-content;
+}
+
+.Modal_cards_add {
+    width: 100%;
+    background-color: #fff;
+    border-radius:5px;
+    box-shadow: 1px 2px 0 1px rgb(0, 0, 0, 0.15);
+    margin-bottom: 10px;
+  }
+  
+  .Modal_cards_add:hover{
+    box-shadow: 1px 2px 0 1px #ccc;
+  
+  }
+
+  .check input{
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .card_box_color {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  .card_box_color li{
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    list-style: none;
+    border: 3px solid transparent;
+transition: 200ms;
+  }
+  .card_box_color :hover {
+    border: 3px solid yellow;
+    
+  }
