@@ -1,0 +1,106 @@
+{
+  "workspaces": [
+    {
+      "name": "Increase Productivity",
+      "members": [
+        {
+          "name": "Ahmad",
+          "email": "ahmad@gmail.com",
+          "employeeID": "E001",
+          "designation": "Manager",
+          "password": "ahmad",
+          "id": 1
+        },
+        {
+          "name": "Abdullah",
+          "email": "abdullah@gmail.com",
+          "employeeID": "E002",
+          "designation": "Layman",
+          "password": "abdullah",
+          "id": 2
+        },
+        {
+          "name": "Ali",
+          "email": "ali@gmail.com",
+          "employeeID": "E003",
+          "designation": "Layman",
+          "password": "ali",
+          "id": 3
+        }
+      ],
+      "tasks": [
+        {
+          "name": "Purchase Energy Efficient Machines",
+          "status": "to-do",
+          "timeline": "15/07/2023",
+          "id": 1
+        },
+        {
+          "name": "Purchase Energy Efficient Electronics",
+          "status": "to-do",
+          "timeline": "15/07/2023",
+          "id": 2
+        },
+        {
+          "name": "Reduce cost of Material",
+          "status": "in-progress",
+          "timeline": "12/08/2023",
+          "id": 3
+        },
+        {
+          "name": "Reduce Inventory holding cost",
+          "status": "completed",
+          "timeline": "10/04/2023",
+          "id": 4
+        },
+        {
+          "name": "Control Rejections",
+          "status": "completed",
+          "timeline": "15/07/2022",
+          "id": 5
+        },
+        {
+          "name": "Minimize Transportation Cost",
+          "status": "completed",
+          "timeline": "15/06/2022",
+          "id": 6
+        }
+      ],
+      "id": 1
+    }
+  ],
+  "users": [
+    {
+      "name": "Ahmad",
+      "email": "ahmad@gmail.com",
+      "employeeID": "E001",
+      "designation": "Manager",
+      "password": "ahmad",
+      "id": 1
+    },
+    {
+      "name": "Abdullah",
+      "email": "abdullah@gmail.com",
+      "employeeID": "E002",
+      "designation": "Layman",
+      "password": "abdullah",
+      "id": 2
+    },
+    {
+      "name": "Ali",
+      "email": "ali@gmail.com",
+      "employeeID": "E003",
+      "designation": "Layman",
+      "password": "ali",
+      "id": 3
+    },
+    {
+      "name": "Abid",
+      "email": "abid@gmail.com",
+      "employeeID": "E005",
+      "designation": "Layman",
+      "password": "abid",
+      "id": 4
+    }
+  ]
+}
