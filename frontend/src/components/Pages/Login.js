@@ -13,8 +13,8 @@ function Login() {
   
       let filterData = jsonData.filter(
         (user) =>
-          user.email.includes(enteredEmail) &&
-          user.password.includes(enteredPassword)
+          user.email == enteredEmail &&
+          user.password == enteredPassword
       );
   
       if (filterData.length > 0) {

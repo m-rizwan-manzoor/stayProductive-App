@@ -30,37 +30,55 @@
       ],
       "tasks": [
         {
-          "name": "Purchase Energy Efficient Machines",
+          "urgency": "critical",
+          "color": "pink",
+          "title": "Purchase Energy Efficient Machines",
+          "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
           "status": "to-do",
           "timeline": "15/07/2023",
           "id": 1
         },
         {
-          "name": "Purchase Energy Efficient Electronics",
+          "urgency": "high",
+          "color": "aqua",
+          "title": "Purchase Energy Efficient Electronics",
+          "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
           "status": "to-do",
           "timeline": "15/07/2023",
           "id": 2
         },
         {
-          "name": "Reduce cost of Material",
+          "urgency": "medium",
+          "color": "orange",
+          "title": "Reduce cost of Material",
+          "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
           "status": "in-progress",
           "timeline": "12/08/2023",
           "id": 3
         },
         {
-          "name": "Reduce Inventory holding cost",
+          "urgency": "low",
+          "color": "yellow",
+          "title": "Reduce Inventory holding cost",
+          "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
           "status": "completed",
           "timeline": "10/04/2023",
           "id": 4
         },
         {
-          "name": "Control Rejections",
+          "urgency": "high",
+          "color": "aqua",
+          "title": "Control Rejections",
+          "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
           "status": "completed",
           "timeline": "15/07/2022",
           "id": 5
         },
         {
-          "name": "Minimize Transportation Cost",
+          "urgency": "standby",
+          "color": "blue",
+          "title": "Minimize Transportation Cost",
+          "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
           "status": "completed",
           "timeline": "15/06/2022",
           "id": 6
