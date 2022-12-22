@@ -1,4 +1,98 @@
 {
+  "users": [
+    {
+      "name": "Ahmad",
+      "email": "ahmad@gmail.com",
+      "password": "ahmad",
+      "id": 1
+    },
+    {
+      "name": "Abdullah",
+      "email": "abdullah@gmail.com",
+      "password": "abdullah",
+      "id": 2
+    },
+    {
+      "name": "Ali",
+      "email": "ali@gmail.com",
+      "password": "ali",
+      "id": 3
+    },
+    {
+      "name": "Abid",
+      "email": "abid@gmail.com",
+      "password": "abid",
+      "id": 4
+    }
+  ],
+  "tasks": [
+    {
+      "created_by": "1",
+      "assigned_to": "2",
+      "urgency": "critical",
+      "color": "pink",
+      "title": "Purchase Energy Efficient Machines",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "status": "to-do",
+      "timeline": "15/07/2023",
+      "id": 1
+    },
+    {
+      "created_by": "1",
+      "assigned_to": "2",
+      "urgency": "high",
+      "color": "aqua",
+      "title": "Purchase Energy Efficient Electronics",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "status": "to-do",
+      "timeline": "15/07/2023",
+      "id": 2
+    },
+    {
+      "created_by": "1",
+      "assigned_to": "2",
+      "urgency": "medium",
+      "color": "orange",
+      "title": "Reduce cost of Material",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "status": "in-progress",
+      "timeline": "12/08/2023",
+      "id": 3
+    },
+    {
+      "created_by": "1",
+      "assigned_to": "2",
+      "urgency": "low",
+      "color": "yellow",
+      "title": "Reduce Inventory holding cost",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "status": "completed",
+      "timeline": "10/04/2023",
+      "id": 4
+    },
+    {
+      "created_by": "1",
+      "assigned_to": "2",
+      "urgency": "high",
+      "color": "aqua",
+      "title": "Control Rejections",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "status": "completed",
+      "timeline": "15/07/2022",
+      "id": 5
+    },
+    {
+      "created_by": "1",
+      "assigned_to": "2",
+      "urgency": "standby",
+      "color": "blue",
+      "title": "Minimize Transportation Cost",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "status": "completed",
+      "timeline": "15/06/2022",
+      "id": 6
+    }
+  ],
   "workspaces": [
     {
       "name": "Increase Productivity",
@@ -28,97 +122,8 @@
           "id": 3
         }
       ],
-      "tasks": [
-        {
-          "urgency": "critical",
-          "color": "pink",
-          "title": "Purchase Energy Efficient Machines",
-          "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          "status": "to-do",
-          "timeline": "15/07/2023",
-          "id": 1
-        },
-        {
-          "urgency": "high",
-          "color": "aqua",
-          "title": "Purchase Energy Efficient Electronics",
-          "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          "status": "to-do",
-          "timeline": "15/07/2023",
-          "id": 2
-        },
-        {
-          "urgency": "medium",
-          "color": "orange",
-          "title": "Reduce cost of Material",
-          "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          "status": "in-progress",
-          "timeline": "12/08/2023",
-          "id": 3
-        },
-        {
-          "urgency": "low",
-          "color": "yellow",
-          "title": "Reduce Inventory holding cost",
-          "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          "status": "completed",
-          "timeline": "10/04/2023",
-          "id": 4
-        },
-        {
-          "urgency": "high",
-          "color": "aqua",
-          "title": "Control Rejections",
-          "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          "status": "completed",
-          "timeline": "15/07/2022",
-          "id": 5
-        },
-        {
-          "urgency": "standby",
-          "color": "blue",
-          "title": "Minimize Transportation Cost",
-          "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          "status": "completed",
-          "timeline": "15/06/2022",
-          "id": 6
-        }
-      ],
+      
       "id": 1
-    }
-  ],
-  "users": [
-    {
-      "name": "Ahmad",
-      "email": "ahmad@gmail.com",
-      "employeeID": "E001",
-      "designation": "Manager",
-      "password": "ahmad",
-      "id": 1
-    },
-    {
-      "name": "Abdullah",
-      "email": "abdullah@gmail.com",
-      "employeeID": "E002",
-      "designation": "Layman",
-      "password": "abdullah",
-      "id": 2
-    },
-    {
-      "name": "Ali",
-      "email": "ali@gmail.com",
-      "employeeID": "E003",
-      "designation": "Layman",
-      "password": "ali",
-      "id": 3
-    },
-    {
-      "name": "Abid",
-      "email": "abid@gmail.com",
-      "employeeID": "E005",
-      "designation": "Layman",
-      "password": "abid",
-      "id": 4
     }
   ]
 }
