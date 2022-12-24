@@ -15,12 +15,15 @@ const Routes = () => {
   return (
     <Fragment>
       <BrowserRouter>
+        {/* Public Routes */}
         <Route exact path="/" component={Home} />
         <Route exact path="/contact-us" component={ContactUs} />
         <Route exact path="/support" component={Support} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/signup" component={SignUp} />
+        <Route path="/hero404" component={Hero404} />
 
+        {/* Authenticated Routes */}
         <Route
           path="/dashboard"
           render={() => (
@@ -29,9 +32,22 @@ const Routes = () => {
             </Auth>
           )}
         />
-        <Route path="/mytasks" component={MyTasks} />
-        <Route path="/hero404" component={Hero404} />
-        <Route path="/teams" component={Teams} />
+        <Route
+          path="/mytasks"
+          render={() => (
+            <Auth>
+              <MyTasks />
+            </Auth>
+          )}
+        ></Route>
+        <Route
+          path="/teams"
+          render={() => (
+            <Auth>
+              <Teams />
+            </Auth>
+          )}
+        ></Route>
       </BrowserRouter>
     </Fragment>
   );
