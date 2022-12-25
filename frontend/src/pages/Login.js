@@ -9,9 +9,9 @@ import {
   CDBBtn,
   CDBCollapse,
   CDBLink,
+  CDBAlert,
 } from "cdbreact";
 import { Redirect } from "react-router-dom";
-import ErrorModal from "../Components/ErrorModal";
 
 function Login() {
   // for NavBar Collapsing
@@ -22,9 +22,18 @@ function Login() {
   const [enteredPassword, setEnteredPassword] = useState("");
   const [isUser, setIsUser] = useState(false);
   // For Validation
-  const [error, setError] = useState();
+  const [validationError, setValidationError] = useState(false);
+  const [emptyFieldError, setEmptyFieldError] = useState(false);
 
   const checkCredentials = async () => {
+    if (
+      enteredEmail.trim().length === 0 ||
+      enteredPassword.trim().length === 0
+    ) {
+      setEmptyFieldError(true);
+      return;
+    }
+
     const response = await fetch("http://localhost:3001/users");
     const jsonData = await response.json();
 
@@ -36,44 +45,27 @@ function Login() {
       localStorage.setItem("loggedUser", JSON.stringify(filterData[0].name));
       localStorage.setItem("loggedUserId", JSON.stringify(filterData[0].id));
       setIsUser(true);
+      setValidationError(false);
+      setEmptyFieldError(false);
     }
 
-    if (filterData.length == 0 || enteredEmail == "" || enteredPassword == "") {
+    if (filterData.length == 0) {
       setIsUser(false);
-      alert("Invalid Credentials!");
+      setValidationError(true);
     }
-
-    // if (
-    //   enteredEmail.trim().length === 0 ||
-    //   enteredPassword.trim().length === 0
-    // ) {
-    //   setError({
-    //     title: "Invalid Credentials",
-    //     message: "Please enter your email and password (non-empty values).",
-    //   });
-    //   return;
-    // }
-    // if (filterData.length == 0) {
-    //   setError({
-    //     title: "Invalid Credentials",
-    //     message: "User not found.",
-    //   });
-    //   return;
-    // }
-
-    // setEnteredEmail("");
-    // setEnteredPassword("");
   };
 
   return (
     <>
-      {/* {error && (
-        <ErrorModal
-          title={error.title}
-          message={error.message}
-          onConfirm={() => setError(null)}
-        />
-      )} */}
+      {validationError && (
+        <CDBAlert color="danger">
+          Invalid Credentials! Pleae verify your email and password are
+          incorrect.
+        </CDBAlert>
+      )}
+      {emptyFieldError && (
+        <CDBAlert color="danger">Pleae fill all the fields.</CDBAlert>
+      )}
       <div className="hero404">
         <div className="page-container">
           <header className="navigation">
