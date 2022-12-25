@@ -9,6 +9,7 @@ import {
   CDBBtn,
   CDBCollapse,
   CDBLink,
+  CDBAlert,
 } from "cdbreact";
 import { useHistory } from "react-router-dom";
 
@@ -17,14 +18,28 @@ function SignUp() {
   const [collapse, setCollapse] = useState(false);
 
   // Signup Logic
-  const [enteredName, setName] = useState([]);
-  const [enteredEmail, setEmail] = useState([]);
-  const [enteredPassword, setPassword] = useState([]);
+  const [enteredName, setName] = useState("");
+  const [enteredEmail, setEmail] = useState("");
+  const [enteredPassword, setPassword] = useState("");
+
+  // For Validation
+  const [emptyFieldError, setEmptyFieldError] = useState(false);
+  const [existingUserError, setExistingUserError] = useState(false);
+
 
   let history = useHistory();
 
   // Get user data and save into Database
   async function Post() {
+    if (
+      enteredName.trim().length === 0 ||
+      enteredEmail.trim().length === 0 ||
+      enteredPassword.trim().length === 0
+    ) {
+      setEmptyFieldError(true);
+      return;
+    }
+
     const user = {
       name: enteredName,
       email: enteredEmail,
@@ -38,21 +53,13 @@ function SignUp() {
     const response = await fetch("http://localhost:3001/users");
     const jsonData = await response.json();
 
-    let alreadyUser = jsonData.find((user) => user.name.includes(enteredName));
+    let alreadyUser = jsonData.find((user) => user.name == enteredName || user.email == enteredEmail);
 
     if (!alreadyUser) {
       isExistingUser = false;
-    } else if (
-      enteredName == "" ||
-      enteredEmail == "" ||
-      enteredPassword == ""
-    ) {
-      isExistingUser = true;
-      alert("Please enter all fields!");
-      return;
     } else {
       isExistingUser = true;
-      alert("User already exist!");
+      setExistingUserError(true);
       return;
     }
 
@@ -75,6 +82,12 @@ function SignUp() {
 
   return (
     <>
+      {emptyFieldError && (
+        <CDBAlert color="danger">Pleae fill all the fields.</CDBAlert>
+      )}
+      {existingUserError && (
+        <CDBAlert color="danger">User already exists with these credentials.</CDBAlert>
+      )}
       <div className="hero404">
         <div className="page-container">
           <header className="navigation">
