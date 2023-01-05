@@ -5,10 +5,9 @@ function Auth(props) {
   const [isLogin, setIsLogin] = useState(false);
 
   useEffect(() => {
-    var logged = localStorage.getItem("loggedUser");
-    var loggedUser = JSON.parse(logged);
+    var token = localStorage.getItem("token");
 
-    if (loggedUser) {
+    if (token) {
       setIsLogin(true);
     }
   }, []);

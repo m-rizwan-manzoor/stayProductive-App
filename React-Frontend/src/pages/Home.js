@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import jwt_decode from "jwt-decode";
 import {
   CDBNavbar,
   CDBNavBrand,
@@ -19,10 +20,12 @@ export const Home = () => {
   const [loggedUserName, setLoggedUserName] = useState("");
 
   useEffect(() => {
-    var logged = localStorage.getItem("loggedUser");
-    var loggedUser = JSON.parse(logged);
+    var token = localStorage.getItem("token");
+    if (token) {
+      var decoded = jwt_decode(token);
 
-    setLoggedUserName(loggedUser);
+      setLoggedUserName(decoded.name);
+    }
   }, []);
 
   return (

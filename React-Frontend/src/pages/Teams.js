@@ -3,18 +3,11 @@ import { useState, useEffect } from "react";
 import { CDBBtn, CDBLink } from "cdbreact";
 import Sidebar from "../Sidebar";
 import Navbar from "../Navbar";
-import "./Dashboard.css";
+import "./Teams.css";
 import TaskCard from "../Components/TaskCard";
 
-export const Dashboard = () => {
-  const [loggedUserName, setLoggedUserName] = useState("");
+export const Teams = () => {
 
-  useEffect(() => {
-    var logged = localStorage.getItem("loggedUser");
-    var loggedUser = JSON.parse(logged);
-
-    setLoggedUserName(loggedUser);
-  }, []);
 
   return (
     <div className="dashboard d-flex">
@@ -33,52 +26,43 @@ export const Dashboard = () => {
         <Navbar />
         <div style={{ height: "100%" }}>
           <div style={{ height: "calc(100% - 64px)", overflowY: "scroll" }}>
-            <div className="text-center">
-              <h3>Hi, {loggedUserName}!</h3>
-              <p>Welcome to your dashboard...</p>
+            <div className="d-flex m-3 align-items-center border-bottom pb-4">
+              <div className="bg-info px-4 py-2 rounded">
+                <img
+                  alt="panelImage"
+                  src="img/pane/statistics.png"
+                  style={{ width: "1.5rem", height: "1.5rem" }}
+                />
+              </div>
+              <div className="input-group ml-4 w-25">
+                <select className="custom-select" id="inputGroupSelect01">
+                  <option selected>Projects...</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
             </div>
 
             <div className="row">
-              <div className="col-md-6 pl-4">
+              <div className="col-md-12 pl-4">
                 <div className="mb-4 border-bottom d-flex justify-content-between">
                   <div className="d-flex mb-1 align-items-center">
                     <div className="">
                       <img
                         alt="panelImage"
-                        src="img/pane/home_tasks.png"
+                        src="img/pane/team.png"
                         style={{ width: "2.5rem", height: "2.5rem" }}
                       />
                     </div>
-                    <h5 className="pt-2 ml-2">Your Tasks</h5>
-                  </div>
-                  <CDBLink to="/mytasks" className="m-0 pt-3">
-                    See All Tasks
-                  </CDBLink>
-                </div>
-                <div className="mb-4 tasks-container">
-                  <TaskCard></TaskCard>
-                  <TaskCard></TaskCard>
-                  <TaskCard></TaskCard>
-                  <TaskCard></TaskCard>
-                  <TaskCard></TaskCard>
-                  <TaskCard></TaskCard>
-                  <TaskCard></TaskCard>
-                </div>
-              </div>
-              <div className="col-md-6">
-              <div className="mb-4 border-bottom d-flex justify-content-between">
-                  <div className="d-flex mb-2 align-items-center">
-                  <div className="">
-                      <img
-                        alt="panelImage"
-                        src="img/pane/home_projects.png"
-                        style={{ width: "2.5rem", height: "2.5rem" }}
-                      />
-                    </div>
-                    <h5 className="pt-2 ml-2">Projects</h5>
+                    <h5 className="pt-2 ml-2">Team Members</h5>
                   </div>
                 </div>
-                <div className="row mx-1">
+                <div className="mb-4 teams-container">
+                  <TaskCard></TaskCard>
+                  <TaskCard></TaskCard>
+                  <TaskCard></TaskCard>
+                  <TaskCard></TaskCard>
                   <TaskCard></TaskCard>
                   <TaskCard></TaskCard>
                   <TaskCard></TaskCard>
